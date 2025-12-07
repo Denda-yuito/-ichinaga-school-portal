@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>生徒会ポータル - ホーム</title>
+  <style>
+    :root {
+      --main: #1e3a8a;
+      --sub: #274aa3;
+      --bg: #f4f6f9;
+      --card: #ffffff;
+    }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: var(--bg);
+      color: #333;
+    }
+    header {
+      background: var(--main);
+      color: white;
+      padding: 18px 28px;
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+    nav {
+      background: var(--sub);
+      color: white;
+      padding: 12px 28px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      font-size: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 6px 8px;
+      border-radius: 4px;
+      transition: 0.2s;
+    }
+    nav a:hover { background: rgba(255,255,255,0.2); }
+    .container { padding: 30px; max-width: 1100px; margin: auto; }
+    .section-title {
+      font-size: 26px;
+      margin-bottom: 20px;
+      font-weight: bold;
+      border-left: 6px solid var(--main);
+      padding-left: 14px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: var(--card);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      transition: 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    }
+    footer {
+      background: var(--main);
+      color: white;
+      padding: 12px;
+      text-align: center;
+      margin-top: 40px;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>生徒会ポータル</header>
+
+  <nav>
+    <a href="index.html">ホーム</a>
+    <a href="news.html">News</a>
+    <a href="docs.html">Docs</a>
+    <a href="projects.html">Projects</a>
+    <a href="voice.html">Voice</a>
+    <a href="media.html">Media</a>
+    <a href="committees.html">Committees</a>
+    <a href="about.html">About</a>
+  </nav>
+
+  <div class="container">
+    <section id="home">
+      <h2 class="section-title">ホーム</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>今日の更新</h3>
+          <p>ここに最新の更新内容を表示できます。</p>
+        </div>
+        <div class="card">
+          <h3>行事カレンダー</h3>
+          <p>GoogleカレンダーやTeams予定表を埋め込めます。</p>
+        </div>
+        <div class="card">
+          <h3>重要リンク</h3>
+          <ul>
+            <li>生徒会Docs</li>
+            <li>委員会資料</li>
+            <li>Twitchy 2.0</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ↓↓↓ 新しい大きめのセクション追加（余白活用） ↓↓↓ -->
+      <div style="margin-top: 40px;">
+        <h2 class="section-title">今週のトピック</h2>
+        <div class="card" style="margin-bottom: 20px;">
+          <h3>・生徒会からのお知らせ</h3>
+          <p>ここに大きいお知らせや、今週の活動報告を掲載します。</p>
+        </div>
+        <div class="card" style="margin-bottom: 20px;">
+          <h3>・進行中プロジェクト</h3>
+          <p>生徒総会、行事改革、アンケートなどの現状をまとめられます。</p>
+        </div>
+        <div class="card" style="margin-bottom: 20px;">
+          <h3>・みんなの声（ハイライト）</h3>
+          <p>LiveBoard や Blackboard で出た意見の一部を紹介できます。</p>
+        </div>
+      </div>
+      <!-- ↑↑↑ ここまで拡張セクション ↑↑↑ -->
+
+    </section>
+
+    <!-- ============================= -->
+    <!-- A. お知らせ強化セクション -->
+    <!-- ============================= -->
+    <section id="news-highlight" style="margin-top:50px;">
+      <h2 class="section-title">お知らせ（最新3件）</h2>
+      <div class="grid">
+        <div class="card"><h3>生徒総会に関する連絡</h3><p>来週の議題一覧を公開しました。</p></div>
+        <div class="card"><h3>アンケート実施</h3><p>生活環境向上アンケートを開始しました。</p></div>
+        <div class="card"><h3>委員会報告</h3><p>先週の委員会活動まとめを公開しました。</p></div>
+      </div>
+    </section>
+
+    <!-- ============================= -->
+    <!-- B. 写真ギャラリー風 横スクロール -->
+    <!-- ============================= --> -->
+    <section id="gallery" style="margin-top:60px;">
+      <h2 class="section-title">フォトギャラリー</h2>
+      <div style="display:flex; gap:20px; overflow-x:auto; padding-bottom:10px;">
+        <div class="card" style="min-width:260px; flex-shrink:0;">学校行事①</div>
+        <div class="card" style="min-width:260px; flex-shrink:0;">学校行事②</div>
+        <div class="card" style="min-width:260px; flex-shrink:0;">学校行事③</div>
+        <div class="card" style="min-width:260px; flex-shrink:0;">学校行事④</div>
+      </div>
+    </section>
+
+    <!-- ============================= -->
+    <!-- C. 生徒会ニュース（ブログ風） -->
+    <!-- ============================= -->
+    <section id="blog" style="margin-top:60px;">
+      <h2 class="section-title">生徒会ニュース</h2>
+      <div class="card" style="margin-bottom:20px;">
+        <h3>【特集】生徒会プロジェクト進行状況</h3>
+        <p>現在進行中の改革案を特集形式でまとめています。来週には続報を掲載予定。</p>
+      </div>
+      <div class="card" style="margin-bottom:20px;">
+        <h3>【レポート】委員会活動の裏側</h3>
+        <p>どの委員会がどんな課題に取り組んでいるのか、中の人にインタビューしてまとめました。</p>
+      </div>
+    </section>
+
+    <!-- ============================= -->
+    <!-- D. LiveBoard風 意見投稿セクション -->
+    <!-- ============================= -->
+    <section id="liveboard" style="margin-top:60px;">
+      <h2 class="section-title">みんなの声（LiveBoard風）</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>意見投稿フォーム</h3>
+          <p>ここに Microsoft Forms か Firebase の投稿フォームを埋め込みます。</p>
+        </div>
+        <div class="card">
+          <h3>リアルタイム投稿一覧</h3>
+          <p>最新投稿をここに自動で一覧表示できます。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= -->
+    <!-- E. 公式サイトっぽい追加要素 -->
+    <!-- ============================= -->
+    <section id="info" style="margin-top:60px; margin-bottom:100px;">
+      <h2 class="section-title">公式インフォメーション</h2>
+      <div class="card" style="margin-bottom:20px;">
+        <h3>生徒会 Vision / Mission</h3>
+        <p>学校生活をより良くするためのビジョンやミッションを明確に示すことができます。</p>
+      </div>
+      <div class="card" style="margin-bottom:20px;">
+        <h3>お問い合わせ</h3>
+        <p>生徒会への質問、活動参加などの連絡先をまとめられます。</p>
+      </div>
+    </section>
+
+      <!-- スクロール領域を広げるための余白 -->
+    <div style="height: 600px;"></div>
+
+  </div>
+
+  <footer>
+    © 生徒会ポータル
+  </footer>
+
+</body>
+</html>
