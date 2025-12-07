@@ -4,39 +4,34 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>生徒会ポータル - ホーム</title>
-<link rel="stylesheet" href="assets/css/style.css" />
+<style>
+:root { --main:#1e3a8a; --sub:#274aa3; --bg:#f4f6f9; --card:#ffffff; }
+body{margin:0;font-family:'Segoe UI',Arial;background:var(--bg);} header{background:var(--main);color:#fff;padding:18px 28px;font-size:24px;font-weight:600;}
+nav{background:var(--sub);padding:12px 28px;display:flex;gap:20px;position:sticky;top:0;} nav a{color:white;text-decoration:none;padding:6px 8px;border-radius:4px;} nav a:hover{background:rgba(255,255,255,0.2);}
+.container{padding:30px;max-width:1100px;margin:auto;} .section-title{font-size:26px;margin-bottom:20px;border-left:6px solid var(--main);padding-left:14px;font-weight:700;}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;} .card{background:white;padding:20px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.1);} footer{background:var(--main);color:white;text-align:center;padding:12px;margin-top:40px;}
+</style>
 </head>
 <body>
 <header>生徒会ポータル</header>
 <nav>
 <a href="index.html">ホーム</a>
-<a href="pages/news.html">News</a>
-<a href="pages/docs.html">Docs</a>
-<a href="pages/projects.html">Projects</a>
-<a href="pages/voice.html">Voice</a>
-<a href="pages/media.html">Media</a>
-<a href="pages/committees.html">Committees</a>
-<a href="pages/about.html">About</a>
+<a href="news.html">News</a>
+<a href="docs.html">Docs</a>
+<a href="projects.html">Projects</a>
+<a href="voice.html">Voice</a>
+<a href="media.html">Media</a>
+<a href="committees.html">Committees</a>
+<a href="about.html">About</a>
 </nav>
-
-
 <div class="container">
-<section>
-<h2 class="section-title">最新情報</h2>
+<h2 class="section-title">ホーム</h2>
 <div class="grid">
-<div class="card"><h3>今日の更新</h3><p>最新情報をまとめたボード。</p></div>
-<div class="card"><h3>カレンダー</h3><p>行事予定を表示。</p></div>
-<div class="card"><h3>重要リンク</h3><ul><li>資料</li><li>委員会</li><li>企画一覧</li></ul></div>
+<div class="card"><h3>今日の更新</h3><p>最新の情報を掲載できます。</p></div>
+<div class="card"><h3>行事カレンダー</h3><p>Googleカレンダーを埋め込めます。</p></div>
+<div class="card"><h3>重要リンク</h3><ul><li>Docs</li><li>委員会資料</li><li>Twitchy2.0</li></ul></div>
 </div>
-</section>
-<section>
-<h2 class="section-title">今週のトピック</h2>
-<div class="card"><h3>トピック1</h3><p>説明</p></div>
-<div class="card"><h3>トピック2</h3><p>説明</p></div>
-</section>
 </div>
-
-
 <footer>© 生徒会ポータル</footer>
 </body>
 </html>
